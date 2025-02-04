@@ -18,10 +18,6 @@ const LoginScreen = () => {
   const [password, setPassword] = useState('');
   const [secureText, setSecureText] = useState(true);
 
-  // const handleLogin = () => {
-  //   dispatch(login(email, password, navigation));
-  // };
-
   useFocusEffect(
     React.useCallback(() => {
       const checkLoginStatus = async () => {

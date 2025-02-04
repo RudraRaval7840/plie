@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { FETCH_EVENTS_REQUEST, FETCH_EVENTS_SUCCESS, FETCH_EVENTS_FAILURE } from '../Type';
 
-// Action Creator - Fetch Events
 export const fetchEvents = () => async (dispatch) => {
   dispatch({ type: FETCH_EVENTS_REQUEST });
 

@@ -21,7 +21,6 @@ export const login = (email, password, navigation) => async dispatch => {
     if (response.data.success) {
       const { token, data } = response.data;
 
-      // Store token in AsyncStorage
       await AsyncStorage.setItem('token', response?.data?.data?.token);
 
 console.log(response?.data?.data?.token,'afcinjedsirjkgmldv');
@@ -36,9 +35,7 @@ console.log(response?.data?.data?.token,'afcinjedsirjkgmldv');
       });
 
 
-      // await AsyncStorage.setItem('user',data.user);
-      //Navigate to Home after successful login
-      // console.log(data.user,'dttrfgfcsdfcsdfc');
+    
       await AsyncStorage.setItem('userData', JSON.stringify(data.user));
 
       

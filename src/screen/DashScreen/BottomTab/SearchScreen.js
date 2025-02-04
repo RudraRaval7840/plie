@@ -22,10 +22,9 @@ const SearchScreen = () => {
 
   useEffect(() => {
     dispatch(fetchEvents());
-    loadFavorites(); // Load favorites from local storage
+    loadFavorites(); 
   }, [dispatch]);
 
-  // Load favorites from AsyncStorage
   const loadFavorites = async () => {
     try {
       const storedFavorites = await AsyncStorage.getItem('favoriteEvents');
@@ -38,7 +37,6 @@ const SearchScreen = () => {
     }
   };
 
-  // Save favorites to AsyncStorage
   const saveFavorites = async favorites => {
     try {
       await AsyncStorage.setItem('favoriteEvents', JSON.stringify(favorites));
@@ -47,7 +45,6 @@ const SearchScreen = () => {
     }
   };
 
-  // Function to toggle favorite status
   const toggleFavorite = event => {
     const isFavorited = favoriteEvents.some(
       favEvent => favEvent.event_date_id === event.event_date_id,
@@ -64,21 +61,18 @@ const SearchScreen = () => {
       updatedFavorites = [...favoriteEvents, event];
     }
 
-    saveFavorites(updatedFavorites); // Save updated favorites
+    saveFavorites(updatedFavorites); 
   };
 
   return (
     <View style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Hello Name</Text>
         <Text style={styles.headerSubtitle}>Are you ready to dance?</Text>
       </View>
 
-      {/* Red separator */}
       <View style={styles.separator} />
 
-      {/* Events List */}
       <View style={styles.eventsContainer}>
         {isLoading ? (
           <Text style={styles.loadingText}>Loading...</Text>
@@ -116,7 +110,6 @@ const SearchScreen = () => {
 
                     <Text style={styles.eventPrice}>${item.event_price_to}</Text>
 
-                    {/* Dance Styles and Favorite Button */}
                     <View style={styles.footer}>
                       <View style={styles.danceStylesContainer}>
                         {item.danceStyles?.map(dance => (

@@ -90,7 +90,9 @@ const FavoriteScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {
+    flex: 1,
+  },
   eventItem: {
     flexDirection: 'row',
     backgroundColor: '#f8f8f8',
@@ -106,33 +108,66 @@ const styles = StyleSheet.create({
     top: 0,
     right: 0,
   },
-  eventImage: {width: 80, height: 80, borderRadius: 10, marginRight: 10},
-  eventDetails: {flex: 1},
-  eventTitle: {fontSize: 18, fontWeight: 'bold'},
+  eventImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    marginRight: 10,
+  },
+  eventDetails: {
+    flex: 1,
+  },
+  eventTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
   eventInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  eventDate: {fontSize: 14, color: 'gray'},
-  eventLocation: {fontSize: 14, color: 'gray'},
-  eventPrice:{fontSize: 14, color: 'black',fontWeight:'bold'},
-  emptyText: {textAlign: 'center', fontSize: 16, marginTop: 20},
+  eventDate: {
+    fontSize: 14,
+    color: 'gray',
+  },
+  eventLocation: {
+    fontSize: 14,
+    color: 'gray',
+  },
+  eventPrice: {
+    fontSize: 14,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  emptyText: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginTop: 20,
+  },
   header: {
     backgroundColor: 'white',
     height: 100,
     width: '100%',
     padding: 20,
   },
-  headerTitle: {fontSize: 25, fontWeight: 'bold'},
-  headerSubtitle: {fontSize: 15, color: 'gray'},
-  separator: {height: 20},
+  headerTitle: {
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  headerSubtitle: {
+    fontSize: 15,
+    color: 'gray',
+  },
+  separator: {
+    height: 20,
+  },
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    // marginTop: 10,
   },
-  danceStylesContainer: {flexDirection: 'row'},
+  danceStylesContainer: {
+    flexDirection: 'row',
+  },
   danceStyle: {
     fontSize: 12,
     color: 'black',
@@ -140,8 +175,14 @@ const styles = StyleSheet.create({
     marginRight: 5,
     borderRadius: 5,
   },
-  iconsContainer: {flexDirection: 'row'},
-  icon: {width: 25, height: 25, marginLeft: 10},
+  iconsContainer: {
+    flexDirection: 'row',
+  },
+  icon: {
+    width: 25,
+    height: 25,
+    marginLeft: 10,
+  },
 });
 
 export default FavoriteScreen;

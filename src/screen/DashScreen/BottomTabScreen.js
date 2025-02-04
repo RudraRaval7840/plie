@@ -12,7 +12,7 @@ const BottomTabScreen = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: 'black', // Change the color of the icon and label when active
+        tabBarActiveTintColor: 'black', 
       }}>
       <Tab.Screen
         name="EventScreen"
